@@ -1,0 +1,4 @@
+######
+### Update user preferences in repdb
+###########
+update UserPreferences set settings=:settings where username=:username and version=:version

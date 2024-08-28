@@ -1,0 +1,11 @@
+select GROUP_NAME,COUNTRY,${tableName}.MCC,OPERATOR,${tableName}.MNC from
+DIM_E_SGEH_MCCMNC,$tableName
+where
+
+#if ( $groupname )
+  hash(GROUP_NAME )= hash('${groupname}') and
+#end
+DIM_E_SGEH_MCCMNC.MCC = ${tableName}.MCC and
+DIM_E_SGEH_MCCMNC.MNC =${tableName}.MNC
+
+order by GROUP_NAME,COUNTRY,OPERATOR,${tableName}.MCC,${tableName}.MNC ASC

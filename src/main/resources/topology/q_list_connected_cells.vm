@@ -1,0 +1,16 @@
+##=============================================================================
+##
+## Topology: list cell(s) connected to specified SAC
+## 
+## sac : id of sac
+##
+##   
+##	   eemecoy
+##	   Date: 6/9/2010
+##=============================================================================
+
+select hierarchy_1, vendor, cell_id from dc.DIM_E_SGEH_HIER321_CELL
+where hierarchy_1 = :$ApplicationConstants.CELL_SQL_NAME and STATUS = 'ACTIVE'
+union
+select hierarchy_1, vendor, cell_id from dc.DIM_Z_SGEH_HIER321_CELL
+where hierarchy_1 = :$ApplicationConstants.CELL_SQL_NAME and STATUS = 'ACTIVE'

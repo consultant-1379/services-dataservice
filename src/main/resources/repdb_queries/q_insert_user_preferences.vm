@@ -1,0 +1,4 @@
+######
+### Add user preferences to repdb
+###########
+insert into UserPreferences(username, version, settings) values(:username, :version, :settings)

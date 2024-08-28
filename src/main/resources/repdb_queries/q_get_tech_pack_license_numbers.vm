@@ -1,0 +1,5 @@
+##
+## Fetch tech pack license numbers from database
+##
+
+select versioning.techpack_name, versioning.licensename from VERSIONING versioning, TPACTIVATION tpactivation where tpactivation.techpack_name = versioning.techpack_name

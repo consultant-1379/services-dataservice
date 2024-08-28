@@ -1,0 +1,15 @@
+## 
+## Verifies if the supplied TAC is in the supplied groupname, in the given table
+## 
+## tableName -- The Group Table name in dwhdb
+## groupname -- The name of the group
+## tac -- the TAC
+
+select
+	TAC
+from 
+	$tableName
+where 
+	GROUP_NAME = '$groupname'
+		and 
+	TAC = $tac

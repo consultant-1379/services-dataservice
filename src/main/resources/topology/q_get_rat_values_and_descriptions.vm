@@ -1,0 +1,5 @@
+## Get RAT values and descriptions from DB
+## 
+## 
+## eemecoy 27/10/2010
+select $ApplicationConstants.RAT_COLUMN_NAME,$ApplicationConstants.RAT_DESC_COLUMN_NAME from dc.DIM_E_SGEH_RAT
